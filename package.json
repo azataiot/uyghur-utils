@@ -1,0 +1,70 @@
+{
+  "name": "uyghur-utils",
+  "version": "0.1.0",
+  "description": "TypeScript utilities for Uyghur language processing - transliteration, slug generation, script detection, and more",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [
+    "uyghur",
+    "uighur",
+    "ئۇيغۇرچە",
+    "transliteration",
+    "uly",
+    "slug",
+    "rtl",
+    "i18n",
+    "localization",
+    "arabic-script",
+    "central-asia",
+    "turkic"
+  ],
+  "author": "azataiot",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azataiot/uyghur-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/azataiot/uyghur-utils/issues"
+  },
+  "homepage": "https://github.com/azataiot/uyghur-utils#readme",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "pnpm@10.26.0"
+}
